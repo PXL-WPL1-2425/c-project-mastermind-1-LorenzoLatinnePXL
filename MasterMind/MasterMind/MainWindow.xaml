@@ -83,6 +83,7 @@
 
 
         <Button 
+            Click="Button_Click"
             Grid.Row="3" 
             Grid.Column="1" 
             Grid.ColumnSpan="2" 

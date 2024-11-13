@@ -150,5 +150,46 @@ namespace MasterMind
                     return Brushes.Black;
             }
         }
+
+        // Checks the input from the ComboBox and compare each option the the solution array.
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CheckCode(solution, ComboBoxOption1, colorLabel1, 0);
+            CheckCode(solution, ComboBoxOption2, colorLabel2, 1);
+            CheckCode(solution, ComboBoxOption3, colorLabel3, 2);
+            CheckCode(solution, ComboBoxOption4, colorLabel4, 3);
+        }
+
+        // Check if the color is in the correct position compared to the solution array.
+        private bool ColorInCorrectPosition(string[] solution, ComboBox comboBox, int position)
+        {
+            if (comboBox.Text == solution[position].ToString())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        // Change the border color of each label if it exist in the solution, or is at the exact position.
+        private void CheckCode(string[] solution, ComboBox comboBox, Label colorLabel, int position)
+        {
+            if (comboBox.Text != null && solution.Contains(comboBox.Text) && !ColorInCorrectPosition(solution, comboBox, position))
+            {
+                colorLabel.BorderBrush = Brushes.Wheat;
+                colorLabel.BorderThickness = new Thickness(5);
+            }
+            else if (ColorInCorrectPosition(solution, comboBox, position))
+            {
+                colorLabel.BorderBrush = Brushes.DarkRed;
+                colorLabel.BorderThickness = new Thickness(5);
+            }
+            else
+            {
+                colorLabel.BorderThickness = new Thickness(0);
+            }
+        }
     }
 }
