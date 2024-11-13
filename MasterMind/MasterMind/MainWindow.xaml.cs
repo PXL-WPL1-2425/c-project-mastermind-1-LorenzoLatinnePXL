@@ -60,6 +60,7 @@ namespace MasterMind
 
         }
 
+        // Generate a random color based on the options-array and a random generated number between 0 and 5.
         private string GenerateRandomColor()
         {
             int randomColor = rnd.Next(0, 6);
@@ -89,6 +90,7 @@ namespace MasterMind
             }
         }
 
+        // Add the string from the options-array as possible options in each ComboBox.
         private ComboBox AddComboBoxItems(ComboBox ComboBox)
         {
             for (int i = 0; i < options.Length; i++)
@@ -96,6 +98,57 @@ namespace MasterMind
                 ComboBox.Items.Add(options[i]);
             }
             return ComboBox;
+        }
+
+        // Change the label color to the selected option of the corresponding ComboBox.
+        private void ComboBoxOption_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+
+            if (comboBox == ComboBoxOption1)
+            {
+                colorLabel1.Background = ChangeLabelBackgroundColor(comboBox);
+            }
+            else if (comboBox == ComboBoxOption2)
+            {
+                colorLabel2.Background = ChangeLabelBackgroundColor(comboBox);
+            }
+            else if (comboBox == ComboBoxOption3)
+            {
+                colorLabel3.Background = ChangeLabelBackgroundColor(comboBox);
+            }
+            else
+            {
+                colorLabel4.Background = ChangeLabelBackgroundColor(comboBox);
+            }
+        }
+
+        // Fetch the Brush (color) from the selected option, based on the options-array.
+        private Brush ChangeLabelBackgroundColor(ComboBox ComboBox)
+        {
+            switch (ComboBox.SelectedIndex)
+            {
+                case 0:
+                    return (Brush)new BrushConverter().ConvertFromString(options[0]);
+
+                case 1:
+                    return (Brush)new BrushConverter().ConvertFromString(options[1]);
+
+                case 2:
+                    return (Brush)new BrushConverter().ConvertFromString(options[2]);
+
+                case 3:
+                    return (Brush)new BrushConverter().ConvertFromString(options[3]);
+
+                case 4:
+                    return (Brush)new BrushConverter().ConvertFromString(options[4]);
+
+                case 5:
+                    return (Brush)new BrushConverter().ConvertFromString(options[5]);
+
+                default:
+                    return Brushes.Black;
+            }
         }
     }
 }

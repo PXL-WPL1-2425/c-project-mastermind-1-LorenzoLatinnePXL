@@ -26,7 +26,7 @@
             VerticalAlignment="Center" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center" 
-            Height="20">
+            Height="20" SelectionChanged="ComboBoxOption_SelectionChanged">
         </ComboBox>
 
         <ComboBox
@@ -35,7 +35,7 @@
             VerticalAlignment="Center" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center" 
-            Height="20">
+            Height="20" SelectionChanged="ComboBoxOption_SelectionChanged">
         </ComboBox>
 
         <ComboBox
@@ -44,7 +44,7 @@
             VerticalAlignment="Center" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center" 
-            Height="20">
+            Height="20" SelectionChanged="ComboBoxOption_SelectionChanged">
         </ComboBox>
 
         <ComboBox
@@ -53,25 +53,29 @@
             VerticalAlignment="Center" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center" 
-            Height="20">
+            Height="20" SelectionChanged="ComboBoxOption_SelectionChanged">
         </ComboBox>
 
         <Label 
+            x:Name="colorLabel1"
             Grid.Row="1" 
             Grid.Column="0" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center"/>
         <Label 
+            x:Name="colorLabel2"
             Grid.Row="1" 
             Grid.Column="1" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center"/>
         <Label 
+            x:Name="colorLabel3"
             Grid.Row="1" 
             Grid.Column="2" 
             HorizontalContentAlignment="Center" 
             VerticalContentAlignment="Center"/>
         <Label 
+            x:Name="colorLabel4"
             Grid.Row="1"
             Grid.Column="3" 
             HorizontalContentAlignment="Center" 
