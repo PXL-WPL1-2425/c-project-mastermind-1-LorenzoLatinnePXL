@@ -52,6 +52,12 @@ namespace MasterMind
             // Change Title to data from the StringBuilder.
             this.Title = sb.ToString();
 
+            // Generate 6 available colors for each ComboBox (from the options array variable)
+            AddComboBoxItems(ComboBoxOption1);
+            AddComboBoxItems(ComboBoxOption2);
+            AddComboBoxItems(ComboBoxOption3);
+            AddComboBoxItems(ComboBoxOption4);
+
         }
 
         private string GenerateRandomColor()
@@ -81,6 +87,15 @@ namespace MasterMind
                 default:
                     return "Color choice out of range.";
             }
+        }
+
+        private ComboBox AddComboBoxItems(ComboBox ComboBox)
+        {
+            for (int i = 0; i < options.Length; i++)
+            {
+                ComboBox.Items.Add(options[i]);
+            }
+            return ComboBox;
         }
     }
 }

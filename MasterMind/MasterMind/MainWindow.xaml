@@ -21,25 +21,71 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20">
+        <ComboBox 
+            x:Name="ComboBoxOption1"
+            VerticalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center" 
+            Height="20">
         </ComboBox>
 
-        <ComboBox VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" Grid.Column="1">
+        <ComboBox
+            x:Name="ComboBoxOption2"
+            Grid.Column="1"
+            VerticalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center" 
+            Height="20">
         </ComboBox>
 
-        <ComboBox Grid.Column="2" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20">
+        <ComboBox
+            x:Name="ComboBoxOption3"
+            Grid.Column="2"
+            VerticalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center" 
+            Height="20">
         </ComboBox>
 
-        <ComboBox Grid.Column="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20">
+        <ComboBox
+            x:Name="ComboBoxOption4"
+            Grid.Column="3"
+            VerticalAlignment="Center" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center" 
+            Height="20">
         </ComboBox>
 
-        <Label Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"/>
+        <Label 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"/>
+        <Label 
+            Grid.Row="1" 
+            Grid.Column="2" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"/>
+        <Label 
+            Grid.Row="1"
+            Grid.Column="3" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"/>
 
 
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Content="Check code" Height="35"  BorderThickness="3,3,3,3" Padding="0,0,0,0"/>
+        <Button 
+            Grid.Row="3" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2" 
+            Content="Check code" 
+            Height="35"  
+            BorderThickness="3,3,3,3" 
+            Padding="0,0,0,0"/>
 
     </Grid>
 </Window>
